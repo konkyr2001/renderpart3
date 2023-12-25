@@ -1,10 +1,12 @@
 const mongoose = require('mongoose')
 
-const url = process.env.URL
+const url2 = process.env.URL
+console.log('url = ',url2)
+const url = 'mongodb+srv://konkyr2001:101draziw@cluster0.0jwdmbj.mongodb.net/Persons?retryWrites=true&w=majority'
 console.log('url = ',url)
 mongoose.connect(url)
-    .then(result => {
-        console.log('connected to database ',result)
+    .then(() => {
+        console.log('connected to database ',url)
     })
     .catch((result) => {
         console.log('error: ',result.message)
